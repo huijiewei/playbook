@@ -30,12 +30,12 @@ actions:
 
   - !writeStatus: {status: "Installing VCRedist"}
   - !download: 
-    url: 'https://aka.ms/vs/17/release/vc_redist.x64.exe'
-    destination: "vc_redist.x64.exe"
+    url: 'https://aka.ms/vs/17/release/vc_redist.arm64.exe'
+    destination: "vc_redist.arm64.exe"
     overwrite: true
   - !run:
     exeDir: true
-    exe: "vc_redist.x64.exe"
+    exe: "vc_redist.arm64.exe"
     args: '/quiet /norestart'
 
   - !writeStatus: {status: 'Installing Revision Tool'}
